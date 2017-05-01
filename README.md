@@ -25,7 +25,7 @@ In your webpack config use it as a loader for images:
         loaders: [
             {
                 test: /\.(png|jpe?g|gif)$/,
-                loader: 'react-native-image-web-image?name=[hash].[ext]'
+                loader: 'react-native-web-image-loader?name=[hash].[ext]'
             }
         ]
     }
@@ -63,7 +63,7 @@ module.exports = {
     loaders: [
         {
             test: /\.(png|jpe?g|gif)$/,
-            loader: 'react-native-image-web-image?name=[name].[ext]&scalings[@2x]=2&scalings[-3x]=3'
+            loader: 'react-native-web-image-loader?name=[name].[ext]&scalings[@2x]=2&scalings[-3x]=3'
         }
     ]
 }
