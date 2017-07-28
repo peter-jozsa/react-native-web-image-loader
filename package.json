@@ -1,6 +1,6 @@
 {
   "name": "react-native-web-image-loader",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "react-native-web-image-loader",
   "main": "lib/index.js",
   "scripts": {
@@ -30,6 +30,7 @@
     "babel-core": "^6.21.0",
     "babel-plugin-syntax-async-functions": "^6.13.0",
     "babel-plugin-syntax-flow": "^6.18.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.20.2",
     "babel-plugin-transform-regenerator": "^6.21.0",
     "babel-plugin-transform-runtime": "^6.15.0",
