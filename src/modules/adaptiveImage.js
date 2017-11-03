@@ -19,6 +19,9 @@ AdaptiveImage.prototype = {
     },
     get height() {
         return this.data.height
+    },
+    toString() {
+        return this.data.uri
     }
 }
 
