@@ -1,6 +1,6 @@
 {
   "name": "react-native-web-image-loader",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "react-native-web-image-loader",
   "main": "lib/index.js",
   "scripts": {
