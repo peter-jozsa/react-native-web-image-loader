@@ -16,6 +16,7 @@ export const createImageWrapper = ( classPath: string ) => ( size: { width: numb
 module.exports = new AdaptiveImage({
     uri: ${uri},${scalings.join('')}
     width: ${size.width},
-    height: ${size.height}
+    height: ${size.height},
+    scales: [1]
 });`
 }
