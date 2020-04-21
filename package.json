@@ -1,15 +1,16 @@
 {
   "name": "react-native-web-image-loader",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "react-native-web-image-loader",
   "main": "lib/index.js",
   "scripts": {
-    "build": "rimraf lib/* && babel src --presets babel-preset-es2015 --plugins=syntax-flow,transform-object-rest-spread,transform-flow-strip-types,syntax-async-functions,transform-regenerator,transform-runtime --out-dir lib",
+    "build": "rimraf lib/* && tsc -b",
+    "dev": "tsc -b -w",
     "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/psychoo118/react-native-web-image-loader.git"
+    "url": "git+https://github.com/peter-jozsa/react-native-web-image-loader.git"
   },
   "keywords": [
     "webpack",
@@ -22,24 +23,24 @@
   "author": "Józsa Péter",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/psychoo118/react-native-web-image-loader/issues"
+    "url": "https://github.com/peter-jozsa/react-native-web-image-loader/issues"
   },
-  "homepage": "https://github.com/psychoo118/react-native-web-image-loader#readme",
+  "homepage": "https://github.com/peter-jozsa/react-native-web-image-loader#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-plugin-syntax-async-functions": "^6.13.0",
-    "babel-plugin-syntax-flow": "^6.18.0",
-    "babel-plugin-transform-flow-strip-types": "^6.22.0",
-    "babel-plugin-transform-object-rest-spread": "^6.20.2",
-    "babel-plugin-transform-regenerator": "^6.21.0",
-    "babel-plugin-transform-runtime": "^6.15.0",
-    "babel-preset-es2015": "^6.18.0",
-    "lodash": "^4.17.11",
-    "rimraf": "^2.5.4"
+    "@types/node": "^13.13.1",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^2.0.2",
+    "rimraf": "^2.5.4",
+    "typescript": "^3.8.3"
   },
   "dependencies": {
     "image-size": "^0.5.1",
-    "loader-utils": "^0.2.16"
+    "loader-utils": "^2.0.0",
+    "schema-utils": "^2.6.6"
   }
 }

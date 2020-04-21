@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "lib/",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "target": "es5",
+    "module": "commonjs",
+    "removeComments": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*"]
+}
