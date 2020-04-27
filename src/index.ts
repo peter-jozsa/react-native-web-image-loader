@@ -48,7 +48,7 @@ export default async function (content: Buffer) {
   }
 
   const imgUrls = {
-    '@1x': outputPath,
+    '@1x': { url, outputPath },
   }
 
   this.emitFile(outputPath, content)
@@ -70,7 +70,7 @@ export default async function (content: Buffer) {
         }
 
         this.emitFile(outputPath, fileContent)
-        imgUrls[`@${scalings[key]}x`] = outputPath
+        imgUrls[`@${scalings[key]}x`] = { url: fileName, outputPath }
       })
     )
   } catch (e) {
@@ -80,8 +80,8 @@ export default async function (content: Buffer) {
   const publicImagePaths = {}
 
   for (const key in imgUrls) {
-    const url = imgUrls[key]
-    let publicPath = `__webpack_public_path__ + ${JSON.stringify(url)}`
+    const { url, outputPath } = imgUrls[key]
+    let publicPath = `__webpack_public_path__ + ${JSON.stringify(outputPath)}`
     if (options.publicPath) {
       if (typeof options.publicPath === 'function') {
         publicPath = options.publicPath(url, this.resourcePath)
